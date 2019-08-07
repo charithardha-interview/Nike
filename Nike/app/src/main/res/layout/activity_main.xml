@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/definitions_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:elevation="0dp"
+            android:background="@android:color/transparent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/definitions_toolbar"
+                android:layout_width="match_parent"
+                app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
+                app:titleTextColor="@android:color/black"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|snap"
+                android:background="@android:color/transparent"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/definitions_tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_height"
+                android:background="@android:color/transparent"
+                app:tabMode="scrollable"
+                android:layout_margin="@dimen/default_margin"
+                app:tabBackground="@drawable/tab_background"
+                app:tabTextColor="@drawable/tab_textcolor"
+                app:tabIndicatorColor="@android:color/transparent"
+                android:layout_gravity="center_horizontal">
+
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
